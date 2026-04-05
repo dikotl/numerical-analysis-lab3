@@ -11,6 +11,8 @@ newton_system :: proc(
 	vars: [N]T,
 	ok: bool,
 ) #optional_ok {
+	vars = guess
+
 	for i in 0 ..= max_iterations {
 		F := system(vars)
 
